@@ -1,0 +1,111 @@
+.main_inf {
+    margin: 30px;
+}
+
+.main_inf h3 {
+    font-size: xx-large;
+    margin-bottom: 15px;
+}
+
+.main_inf p {
+    font-size: medium;
+    margin-left: 30px;
+}
+
+.meta-inf {
+    width: 100%;
+    background-color: lightgrey;
+    margin: 25px 0;
+    height: 30px;
+    padding: 5px 0;
+}
+
+.meta-inf div {
+    display: inline-flex;
+    font-size: 12px;
+}
+
+.meta-inf div:first-child {
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.meta-inf div:last-child {
+    font-size: medium;
+    margin-right: 15px;
+}
+
+.comments-header {
+    margin: 0 20px 20px 20px;
+}
+
+.comments-header div {
+    display: inline-block;
+}
+
+.comments-header div:first-child h4{
+    font-size: x-large;
+}
+
+.comments-header div:last-child {
+    font-size: small;
+}
+
+.comments {
+    margin: 30px;
+    padding: 0 10px 10px 10px;
+    width: 800px;
+}
+
+.comment {
+    border: 1px black solid;
+    margin: 10px 0;
+    width: 800px;
+}
+
+.comment > div:first-child div {
+    display: inline-block;
+}
+
+.comment > div:first-child {
+    padding: 5px;
+}
+
+.comment > div:first-child div:first-child {
+    margin-right: 20px;
+}
+
+.comment > .text {
+    padding: 15px;
+    font-size: 17px;
+}
+
+.new-comment-form {
+    margin-top: 30px;
+}
+.new-comment-form label {
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.new-comment-form textarea {
+    max-width: 750px;
+    max-height: 60px;
+    min-height: 60px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+.like-dislike-buttons span{
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+div.author, div.date {
+    font-size: 14px;
+}

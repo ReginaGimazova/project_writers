@@ -1,0 +1,80 @@
+.header {
+    background-color: #541d38;
+    /*background-color: #60434f;*/
+    padding: 10px;
+}
+
+.brand:link, .brand:visited, .brand:hover, .brand:active {
+    color: #fff;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.input-text {
+    width: 350px;
+    height: 33px;
+}
+
+.menu-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.menu-btn:hover + .menu {
+    display: block;
+}
+
+.menu {
+    list-style: none;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    z-index: 10;
+    display: none;
+    background-color: white;
+}
+
+.menu:hover {
+    display: block;
+}
+
+.menu a {
+    display: block;
+    margin-bottom: -1px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #0088cc;
+    border: 1px solid #e5e5e5;
+    font-size: medium;
+}
+
+.menu-btn {
+    content: url("../media/unknown_user.png");
+}
+/*Цветовое оформление*/
+
+.btn {
+    background-color: #cfd0d2;
+    color: #292021;
+    border-color: #cfd0d2;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #8b4f6e;
+    border-color: #8b4f6e;
+    color: #fff;
+}
+
+a:link, a:visited {
+    color: #292021;
+}
+
+a:active, a:hover{
+    color: #8b4f6e;
+}

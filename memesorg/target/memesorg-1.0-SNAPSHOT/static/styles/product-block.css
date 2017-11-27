@@ -1,0 +1,48 @@
+.product {
+    border: 1px black solid;
+    margin-left: 50px;
+    /*margin-right: 300px;*/
+    margin-top: 20px;
+    width: 85%;
+    height: 165px;
+    display: table;
+}
+
+.product > div {
+    display: table-row;
+}
+
+.product > div:last-child > div {
+    vertical-align: bottom;
+    padding: 30px 10px 10px 25px;
+    width: 85px;
+}
+
+.product > div:last-child > div:last-child {
+    text-align: right;
+    font-size: medium;
+}
+
+.product > div > div {
+    display: table-cell;
+}
+
+.product .name {
+    padding: 20px;
+    font-size: larger;
+}
+
+.product .name h5 {
+    font-size: x-large;
+}
+
+.product .description {
+    padding-left: 0;
+    padding-right: 10px;
+    font-size: medium;
+}
+
+.meta-data{
+    font-size: 13px;
+    padding-left: 20px;
+}

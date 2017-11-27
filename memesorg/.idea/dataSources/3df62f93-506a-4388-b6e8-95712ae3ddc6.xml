@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="writers@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="writers">
+      <ObjectId>41190</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+    </database>
+    <database id="4" parent="1" name="Кинопрокат">
+      <ObjectId>16412</ObjectId>
+    </database>
+    <database id="5" parent="1" name="num1">
+      <ObjectId>16416</ObjectId>
+    </database>
+    <database id="6" parent="1" name="film_distribution">
+      <ObjectId>16494</ObjectId>
+    </database>
+    <database id="7" parent="1" name="project_film_distribution">
+      <ObjectId>16495</ObjectId>
+    </database>
+    <database id="8" parent="1" name="img_tag">
+      <ObjectId>24637</ObjectId>
+    </database>
+    <database id="9" parent="1" name="tag_img">
+      <ObjectId>24638</ObjectId>
+    </database>
+    <database id="10" parent="1" name="user">
+      <ObjectId>24639</ObjectId>
+    </database>
+    <database id="11" parent="1" name="database">
+      <ObjectId>24679</ObjectId>
+    </database>
+    <database id="12" parent="1" name="Database_for_proj2">
+      <ObjectId>24719</ObjectId>
+    </database>
+    <database id="13" parent="1" name="test">
+      <ObjectId>41161</ObjectId>
+    </database>
+    <schema id="14" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-11-27.23:33:44.606</IntrospectionTimestamp>
+      <IntrospectionStateNumber>928</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="15" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="20" parent="14" name="hibernate_sequence">
+      <ObjectId>41260</ObjectId>
+      <StateNumber>900</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="21" parent="14" name="advices">
+      <ObjectId>41198</ObjectId>
+      <StateNumber>919</StateNumber>
+    </table>
+    <table id="22" parent="14" name="comment">
+      <ObjectId>41206</ObjectId>
+      <StateNumber>920</StateNumber>
+    </table>
+    <table id="23" parent="14" name="statistic">
+      <ObjectId>41240</ObjectId>
+      <StateNumber>893</StateNumber>
+    </table>
+    <table id="24" parent="14" name="user_table">
+      <ObjectId>41287</ObjectId>
+      <StateNumber>922</StateNumber>
+    </table>
+    <table id="25" parent="14" name="work">
+      <ObjectId>41224</ObjectId>
+      <StateNumber>922</StateNumber>
+    </table>
+    <column id="26" parent="21" name="advice_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>882</StateNumber>
+    </column>
+    <column id="27" parent="21" name="advice">
+      <Position>2</Position>
+      <DataType>varchar(300)|0</DataType>
+      <StateNumber>885</StateNumber>
+    </column>
+    <column id="28" parent="21" name="user_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>888</StateNumber>
+    </column>
+    <index id="29" parent="21" name="advices_pkey">
+      <ObjectId>41211</ObjectId>
+      <ColNames>advice_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="21" name="advices_pkey">
+      <ObjectId>41212</ObjectId>
+      <ColNames>advice_id</ColNames>
+      <UnderlyingIndexName>advices_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="21" name="advices_user_table__fk">
+      <ObjectId>41294</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>41287</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_table</RefTableName>
+      <RefKeyName>user_table_user_id_pk</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <column id="32" parent="22" name="id_comment">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>890</StateNumber>
+    </column>
+    <column id="33" parent="22" name="time_of_add_comment">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>883</StateNumber>
+    </column>
+    <column id="34" parent="22" name="comment">
+      <Position>3</Position>
+      <DataType>varchar(300)|0</DataType>
+      <StateNumber>884</StateNumber>
+    </column>
+    <column id="35" parent="22" name="user_id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>891</StateNumber>
+    </column>
+    <column id="36" parent="22" name="work_id">
+      <Position>5</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>894</StateNumber>
+    </column>
+    <index id="37" parent="22" name="comment_pkey">
+      <ObjectId>41209</ObjectId>
+      <ColNames>id_comment</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="22" name="comment_pkey">
+      <ObjectId>41210</ObjectId>
+      <ColNames>id_comment</ColNames>
+      <UnderlyingIndexName>comment_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="22" name="comment_user_table__fk">
+      <ObjectId>41299</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>41287</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_table</RefTableName>
+      <RefKeyName>user_table_user_id_pk</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="40" parent="22" name="comment_work__fk">
+      <ObjectId>41248</ObjectId>
+      <ColNames>work_id</ColNames>
+      <RefTableId>41224</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>work</RefTableName>
+      <RefKeyName>work_pkey</RefKeyName>
+      <RefColNames>id_work</RefColNames>
+    </foreign-key>
+    <column id="41" parent="23" name="id_work">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>893</StateNumber>
+    </column>
+    <column id="42" parent="23" name="likes">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>893</StateNumber>
+    </column>
+    <column id="43" parent="23" name="dislikes">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>893</StateNumber>
+    </column>
+    <foreign-key id="44" parent="23" name="statistic_work__fk">
+      <ObjectId>41243</ObjectId>
+      <ColNames>id_work</ColNames>
+      <RefTableId>41224</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>work</RefTableName>
+      <RefKeyName>work_pkey</RefKeyName>
+      <RefColNames>id_work</RefColNames>
+    </foreign-key>
+    <column id="45" parent="24" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>918</StateNumber>
+    </column>
+    <column id="46" parent="24" name="login">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>915</StateNumber>
+    </column>
+    <column id="47" parent="24" name="username">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>915</StateNumber>
+    </column>
+    <column id="48" parent="24" name="password">
+      <Position>4</Position>
+      <DataType>varchar(40)|0</DataType>
+      <StateNumber>926</StateNumber>
+    </column>
+    <column id="49" parent="24" name="password_confirm">
+      <Position>5</Position>
+      <DataType>varchar(40)|0</DataType>
+      <StateNumber>927</StateNumber>
+    </column>
+    <column id="50" parent="24" name="email">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>928</StateNumber>
+    </column>
+    <index id="51" parent="24" name="user_table_user_id_pk">
+      <ObjectId>41292</ObjectId>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="52" parent="24" name="user_table_login_uindex">
+      <ObjectId>41290</ObjectId>
+      <ColNames>login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="53" parent="24" name="user_table_username_uindex">
+      <ObjectId>41291</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="24" name="user_table_user_id_pk">
+      <ObjectId>41293</ObjectId>
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>user_table_user_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="25" name="id_work">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>886</StateNumber>
+    </column>
+    <column id="56" parent="25" name="name_work">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>886</StateNumber>
+    </column>
+    <column id="57" parent="25" name="short_description">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>886</StateNumber>
+    </column>
+    <column id="58" parent="25" name="text_of_work">
+      <Position>4</Position>
+      <DataType>varchar(300)|0</DataType>
+      <StateNumber>886</StateNumber>
+    </column>
+    <column id="59" parent="25" name="date_of_add_work">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>886</StateNumber>
+    </column>
+    <column id="60" parent="25" name="poetry_or_prose">
+      <Position>6</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>886</StateNumber>
+    </column>
+    <column id="61" parent="25" name="user_id">
+      <Position>7</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>896</StateNumber>
+    </column>
+    <index id="62" parent="25" name="work_pkey">
+      <ObjectId>41227</ObjectId>
+      <ColNames>id_work</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="25" name="work_name_work_uindex">
+      <ObjectId>41229</ObjectId>
+      <ColNames>name_work</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="25" name="work_pkey">
+      <ObjectId>41228</ObjectId>
+      <ColNames>id_work</ColNames>
+      <UnderlyingIndexName>work_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="25" name="work_user_table__fk">
+      <ObjectId>41304</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>41287</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_table</RefTableName>
+      <RefKeyName>user_table_user_id_pk</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

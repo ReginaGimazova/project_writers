@@ -1,0 +1,93 @@
+create sequence hibernate_sequence
+;
+
+create table advices
+(
+	advice_id bigint not null
+		constraint advices_pkey
+			primary key,
+	advice varchar(300),
+	user_id bigint
+)
+;
+
+create table comment
+(
+	id_comment bigint not null
+		constraint comment_pkey
+			primary key,
+	time_of_add_comment timestamp,
+	comment varchar(300),
+	user_id bigint,
+	work_id bigint
+)
+;
+
+create table work
+(
+	id_work integer not null
+		constraint work_pkey
+			primary key,
+	name_work varchar(30),
+	short_description varchar(100),
+	text_of_work varchar(300),
+	date_of_add_work timestamp,
+	poetry_or_prose boolean,
+	user_id bigint
+)
+;
+
+create unique index work_name_work_uindex
+	on work (name_work)
+;
+
+alter table comment
+	add constraint comment_work__fk
+		foreign key (work_id) references work
+;
+
+create table statistic
+(
+	id_work bigint
+		constraint statistic_work__fk
+			references work,
+	likes integer,
+	dislikes integer
+)
+;
+
+create table user_table
+(
+	user_id bigint not null
+		constraint user_table_user_id_pk
+			primary key,
+	login varchar(30),
+	username varchar(30),
+	password varchar(40),
+	password_confirm varchar(40),
+	email varchar(30)
+)
+;
+
+create unique index user_table_login_uindex
+	on user_table (login)
+;
+
+create unique index user_table_username_uindex
+	on user_table (username)
+;
+
+alter table advices
+	add constraint advices_user_table__fk
+		foreign key (user_id) references user_table
+;
+
+alter table comment
+	add constraint comment_user_table__fk
+		foreign key (user_id) references user_table
+;
+
+alter table work
+	add constraint work_user_table__fk
+		foreign key (user_id) references user_table
+;
