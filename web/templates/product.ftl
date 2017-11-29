@@ -22,8 +22,8 @@
         <div>${product.author.name}</div>
         <div>${product.date}</div>
         <div class="float-right like-dislike-buttons">
-            <span class="glyphicon glyphicon-thumbs-up"></span> ${product.likesNumber}
-            <span class="glyphicon glyphicon-thumbs-down"></span> ${product.dislikesNumber}
+            <span onclick="do_like(product_id=${product.id})" class="glyphicon glyphicon-thumbs-up"></span> ${product.likesNumber}
+            <span onclick="do_dislike(product_id=${product.id})" class="glyphicon glyphicon-thumbs-down"></span> ${product.dislikesNumber}
         </div>
     </div>
     <div class="comments-header">
