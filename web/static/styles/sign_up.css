@@ -59,10 +59,3 @@ input {
     width: 250px;
 }
 
-.error-message{
-    color: #ff7687;
-}
-
-.form-label{
-    position: static;
-}

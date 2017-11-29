@@ -14,18 +14,18 @@ function checkLogin(login) {
     var errorText = document.getElementById('loginerror');
     var loginError = "";
     if(login.length == 0){
-        loginError = 'Login field cannot be empty';
+        loginError = 'Это поле не может быть пустым';
         errorText.innerHTML = loginError;
         // alert(loginError);
         return false;
     }else {
         if (login.length < 5){
-            loginError = 'Login is too short';
+            loginError = 'Логин слишком короткий';
             errorText.innerHTML = loginError;
             return false;
         }
         if (!validateLogin(login)){
-            loginError = 'Login is not valid';
+            loginError = 'Логин содержит недопустимые символы';
             errorText.innerHTML = loginError;
             // alert(loginError);
             return false;
@@ -40,23 +40,23 @@ function checkPassword(password, passwordRepeat) {
     var errorText2 = document.getElementById('passwordrepeaterror');
     var passwordError;
     if(password.length == 0){
-        passwordError = 'Password field cannot be empty';
+        passwordError = 'Это поле не может быть пустым';
         errorText1.innerHTML = passwordError;
         // alert(passwordError);
         return false;
     }else {
         if (password.length < 5){
-            passwordError = 'Password is too short';
+            passwordError = 'Пароль слишком короткий';
             errorText1.innerHTML = passwordError;
             return false;
         }
         if (!validatePassword(password)){
-            passwordError = 'Password contains invalid characters';
+            passwordError = 'Пароль содержит недопустимые символы';
             errorText1.innerHTML = passwordError;
             return false;
         }
         else if(password != passwordRepeat ){
-            passwordError = "Passwords do not match";
+            passwordError = "Введенные пароли не совпадают";
             errorText1.innerHTML = "";
             errorText2.innerHTML = passwordError;
             return false;
@@ -71,13 +71,13 @@ function checkEmail(email) {
     var errorText = document.getElementById('emailerror');
     var emailError;
     if(email.length == 0){
-        emailError = 'Email field cannot be empty';
+        emailError = 'Это поле не может быть пустым';
         errorText.innerHTML = emailError;
         // alert(emailError);
         return false;
     }else {
         if (!validateEmail(email)){
-            emailError = 'Email is not valid';
+            emailError = 'Адрес электронной почты не прошел валидацию';
             errorText.innerHTML = emailError;
             // alert(emailError);
             return false;
@@ -91,7 +91,7 @@ function checkDate(date) {
     var errorText = document.getElementById('dateerror');
     var dateError;
     if(date.length == 0){
-        dateError = "Date field can not be empty";
+        dateError = "Это поле не может быть пустым";
         errorText.innerHTML = dateError;
         // alert(dateError);
         return false;
@@ -104,12 +104,12 @@ function checkName(name) {
     var errorText = document.getElementById('nameerror');
     var nameError;
     if(name.length == 0){
-        nameError = "Name field can not be empty";
+        nameError = "Это поле не может быть пустым";
         errorText.innerHTML = nameError;
         // alert(dateError);
         return false;
     }else if(!validateName(name)){
-        nameError = "Name not valid";
+        nameError = "Поле содержит недопустимые символы";
         errorText.innerHTML = nameError;
         return false;
     }
