@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/styles/main.css">
     <link rel="stylesheet" href="../static/styles/sign_up.css">
+    <script src="../web/static/javascript/sign_up_form_validation.js"></script>
+    <script src="../web/static/javascript/regexps.js"></script>
 </head>
 <body>
     <div class="header">
@@ -17,58 +19,66 @@
             <h1 class="title">Регистрация нового пользователя</h1>
         </div>
         <div class="form">
-            <form action="sign_up" method="post">
+            <form action="sign_up" method="post" onsubmit="return validateRegistration()">
                 <div class="form-group">
                     <div class=" label">
-                        <label for="login" class="col-form-label ">Логин</label></div>
+                        <label for="login" class="col-form-label form-label">Логин</label></div>
                     <div class="">
-                        <input type="text" id="login" name="login" class="form-control ">
+                        <input type="text" id="login" name="login" class="form-control " autofocus>
                     </div>
+
                 </div>
+                <p class="error-message" id="loginerror"></p>
+
                 <div class="form-group">
                     <div class=" label">
-                        <label for="password" class="col-form-label ">Пароль</label>
+                        <label for="password" class="col-form-label form-label">Пароль</label>
                     </div>
                     <div class="">
                         <input type="password" id="password" name="password" class="form-control ">
+                        <p class="error-message" id="passworderror"></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class=" label">
-                        <label for="password-repeat" class="col-form-label ">Повторите пароль</label>
+                        <label for="password-repeat" class="col-form-label form-label">Повторите пароль</label>
                     </div>
                     <div class="">
-                        <input type="password" id="password-repeat" name="passord-repeat" class="form-control ">
+                        <input type="password" id="password-repeat" name="password-repeat" class="form-control ">
+                        <p class="error-message" id="passwordrepeaterror"></p>
                     </div>
                 </div>
                 <div style="margin: 75px"></div>
                 <div class="form-group">
                     <div class=" label">
-                        <label for="name" class=" col-form-label ">Имя</label>
+                        <label for="name" class=" col-form-label form-label">Имя</label>
                     </div>
                     <div class="">
                         <input type="text" id="name" name="name" class="form-control ">
+                        <p class="error-message" id="nameerror"></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class=" label">
-                        <label for="email" class="col-form-label ">Адрес электронной почты</label>
+                        <label for="email" class="col-form-label form-label">Адрес электронной почты</label>
                     </div>
                     <div class="">
                         <input type="email" id="email" name="email" class="form-control ">
+                        <p class="error-message" id="emailerror"></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class=" label">
-                        <label for="birthday" class=" col-form-label ">Дата рождения</label>
+                        <label for="birthday" class=" col-form-label form-label">Дата рождения</label>
                     </div>
                     <div class="">
-                        <input type="date" id="birthday" name="birthday" class="form-control ">
+                        <input type="date" id="birthday" name="birthday" class="form-control">
+                        <p class="error-message" id="dateerror"></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class=" label">
-                        <label for="country" class=" col-form-label ">Страна</label>
+                        <label for="country" class=" col-form-label form-label">Страна</label>
                     </div>
                     <div class="">
                         <!-- TODO Весь список стран -->
