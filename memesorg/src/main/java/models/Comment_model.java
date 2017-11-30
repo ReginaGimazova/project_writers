@@ -10,16 +10,44 @@ public class Comment_model {
     @Id
     @Column(name = "id_comment")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_comment;
+    public Long id_comment;
 
     @Column(name = "time_of_add_comment")
-    private Date time;
+    public Date time;
 
     @Column(name = "comment")
-    private String comment;
+    public String comment;
 
-    @Column(name = "user_id")
-    private Long user_id;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    public User_model user;
+
+    @ManyToOne
+    @JoinColumn(name = "work_id")
+    public Work_model work;
+
+    public Comment_model() {
+    }
+
+    public Comment_model(String comment, Date time){
+        this.comment = comment;
+        this.time = time;
+    }
+
+    public Work_model getWork(){
+        return this.work;
+    }
+
+    public Comment_model(String comment) {
+        this.comment = comment;
+    }
+
+    public User_model getUser(){
+        return this.user;
+    }
+    public void setWork(Work_model work) {
+        this.work = work;
+    }
 
     public Long getId_comment() {
         return id_comment;
@@ -45,22 +73,7 @@ public class Comment_model {
         this.comment = comment;
     }
 
-    public Long getUser_id() {
-        return user_id;
+    public void setUser(User_model user) {
+        this.user = user;
     }
-
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }
-
-    public Long getWork_id() {
-        return work_id;
-    }
-
-    public void setWork_id(Long work_id) {
-        this.work_id = work_id;
-    }
-
-    @Column(name = "work_id")
-    private Long work_id;
 }

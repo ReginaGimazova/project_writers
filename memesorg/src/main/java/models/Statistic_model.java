@@ -8,19 +8,35 @@ import java.util.Date;
 public class Statistic_model {
 
     @Id
-    @Column(name = "id_work")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_work;
+    public Long id;
 
     @Column(name = "likes")
-    private Integer likes;
+    public Integer likes;
 
-    public Long getId_work() {
-        return id_work;
+    @Column(name = "dislikes")
+    public Integer dislikes;
+
+    @ManyToOne
+    @JoinColumn(name = "id_work")
+    public Work_model work;
+
+
+    public Work_model getWork(){
+        return this.work;
     }
 
-    public void setId_work(Long id_work) {
-        this.id_work = id_work;
+    public void setWork(Work_model work) {
+        this.work = work;
+    }
+
+    public Long getId_work() {
+        return id;
+    }
+
+    public void setId_work(Long id) {
+        this.id = id;
     }
 
     public Integer getLikes() {
@@ -38,8 +54,4 @@ public class Statistic_model {
     public void setDislikes(Integer dislikes) {
         this.dislikes = dislikes;
     }
-
-    @Column(name = "dislikes")
-
-    private Integer dislikes;
 }

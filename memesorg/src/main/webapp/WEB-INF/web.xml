@@ -4,6 +4,6 @@
   <display-name>memesorg</display-name>
   
   <welcome-file-list>
-    <welcome-file>auth.html</welcome-file>
+    <welcome-file>main_page.html</welcome-file>
   </welcome-file-list>
 </web-app>

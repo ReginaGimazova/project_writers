@@ -1,0 +1,62 @@
+.content {
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: small;
+}
+
+.form-control {
+    font-size: small;
+    margin-left: 70px;
+    width: 650px;
+}
+
+input.form-control {
+    /*width: 250px;*/
+    height: 30px;
+}
+
+/*.name *{*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.name input {*/
+    /*margin-left: 20px;*/
+/*}*/
+
+textarea.form-control {
+    /*margin-left: 85px;*/
+    /*width: 400px;*/
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+}
+
+.text textarea {
+    /*width: 800px;*/
+    min-height: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: medium;
+}
+
+.btns {
+    width: 650px;
+    margin-left: 70px;
+}
+
+.btn-primary {
+    margin-right: 0;
+}
+.content {
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+.btn {
+    font-size: 18px;
+}

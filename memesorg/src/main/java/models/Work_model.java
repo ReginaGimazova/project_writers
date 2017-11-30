@@ -2,6 +2,8 @@ package models;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "work")
@@ -10,22 +12,63 @@ public class Work_model {
     @Id
     @Column(name = "id_work")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_work;
+    public Long id_work;
 
     @Column(name = "name_work")
-    private String name_work;
+    public String name_work;
 
     @Column(name = "short_description")
-    private String short_description;
+    public String short_description;
 
     @Column(name = "text_of_work")
-    private String text;
+    public String text;
 
     @Column(name = "date_of_add_work")
-    private Date date;
+    public Date date;
 
     @Column(name = "poetry_or_prose")
-    private boolean genre;
+    public String genre;
+
+    @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    private User_model user;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "work")
+    private Set<Comment_model> comments;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "work")
+    private Set<Statistic_model> statistic;
+
+    public Set<Comment_model> getComments(){
+        return this.comments;
+    }
+
+    public Set<Statistic_model> getStatistic(){
+        return this.statistic;
+    }
+
+    public void setStatistic(Set<Statistic_model> statistics) {
+        this.statistic = statistics;
+    }
+
+    public Work_model() {
+    }
+
+    public Work_model(String name_work, String short_description, String text, Date date, String genre) {
+        this.name_work = name_work;
+        this.short_description = short_description;
+        this.text = text;
+        this.date = date;
+        this.genre = genre;
+    }
+
+    public User_model getUser(){
+        return this.user;
+    }
+
+    public void setComments(Set<Comment_model> comments) {
+        this.comments = comments;
+    }
 
     public Long getId_work() {
         return id_work;
@@ -67,22 +110,15 @@ public class Work_model {
         this.date = date;
     }
 
-    public boolean isGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(boolean genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 
-    public Long getUser_id() {
-        return user_id;
+    public void setUser(User_model user) {
+        this.user = user;
     }
-
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }
-
-    @Column(name = "user_id")
-    private Long user_id;
 }

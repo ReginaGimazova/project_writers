@@ -14,8 +14,21 @@ public class Advice_model {
     @Column(name = "advice")
     private String advice;
 
-    @Column(name = "user_id")
-    private String user_id;
+    @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.MERGE)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    private User_model user;
+
+    public User_model getUser(){
+        return this.user;
+    }
+
+
+    public Advice_model() {
+    }
+
+    public Advice_model(String advice) {
+        this.advice = advice;
+    }
 
     public Long getAdvice_id() {
         return advice_id;
@@ -33,11 +46,7 @@ public class Advice_model {
         this.advice = advice;
     }
 
-    public String getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUser(User_model user) {
+        this.user = user;
     }
 }

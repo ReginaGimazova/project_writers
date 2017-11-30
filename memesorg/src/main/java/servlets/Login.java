@@ -1,6 +1,6 @@
 package servlets;
 
-import DAO.UserDAOImpl;
+import DAO.implementations_DAO.UserDAOImpl;
 import HashPassword.MD5Hash;
 import models.User_model;
 
@@ -29,20 +29,22 @@ public class Login extends HttpServlet {
         }
 
         UserDAOImpl userDAO = new UserDAOImpl();
-        User_model user = userDAO.findByUsername(login);
+        User_model user = userDAO.findByName(login);
 
         if (user != null && user.getPassword().equals(password)){
             HttpSession session = req.getSession();
             Long userId = user.getId();
             session.setAttribute("user_id", userId);
-            resp.sendRedirect(req.getContextPath() + "profile.html");
+            resp.sendRedirect(req.getContextPath() + "add_product.html");
+            //req.getRequestDispatcher("add_product.html").forward(req, resp);
         }
         else {
             resp.sendRedirect(req.getContextPath() + "auth.html");
+            // req.getRequestDispatcher("auth.html").forward(req, resp);
         }
     }
 
-   @Override
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");
         req.getRequestDispatcher("auth.html").forward(req, resp);

@@ -10,5 +10,13 @@
       <user-name>postgres</user-name>
       <introspection-schemas>writers:public</introspection-schemas>
     </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="b289ea52-c7a8-4bc1-bad4-f1f4ad8c33ed">
+      <database-info product="PostgreSQL" version="9.6.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>postgres</user-name>
+      <introspection-schemas>writers:public</introspection-schemas>
+    </data-source>
   </component>
 </project>

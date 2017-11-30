@@ -6,6 +6,18 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/writers</jdbc-url>
+      <default-dialect>PostgreSQL</default-dialect>
+      <driver-properties>
+        <property name="ApplicationName" value="DataGrip" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="b289ea52-c7a8-4bc1-bad4-f1f4ad8c33ed">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/writers</jdbc-url>
       <driver-properties>
         <property name="ApplicationName" value="DataGrip" />
       </driver-properties>

@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "user_table")
@@ -9,22 +10,69 @@ public class User_model {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    public Long id;
 
     @Column(name = "username")
-    private String username;
+    public String username;
 
     @Column(name = "email")
-    private String email;
+    public String email;
 
     @Column(name = "login")
-    private String login;
+    public String login;
 
     @Column(name = "password")
-    private String password;
+    public String password;
 
     @Column(name = "password_confirm")
-    private String password_confirm;
+    public String password_confirm;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<Work_model> works;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<Advice_model> advices;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<Comment_model> comments;
+
+    public Set<Work_model> getWorks(){
+        return this.works;
+    }
+    public Set<Comment_model> getComments(){
+        return this.comments;
+    }
+    public Set<Advice_model> getAdvices(){
+        return this.advices;
+    }
+
+
+    public void setWorks(Set<Work_model> works){
+        this.works = works;
+    }
+
+    public void setComments(Set<Comment_model> comments) {
+        this.comments = comments;
+    }
+
+    public void addComments(Comment_model comment){
+        comment.setUser(this);
+        this.comments.add(comment);
+    }
+
+    public void addWorks(Work_model work){
+        work.setUser(this);
+        this.works.add(work);
+    }
+
+    public void setAdvices(Set<Advice_model> advices) {
+        this.advices = advices;
+    }
+
+    public void addAdvices(Advice_model advice){
+        advice.setUser(this);
+        this.advices.add(advice);
+    }
 
     public User_model(String username, String email, String login, String password, String password_confirm) {
         this.username = username;

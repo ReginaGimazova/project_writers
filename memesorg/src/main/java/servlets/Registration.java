@@ -1,6 +1,6 @@
 package servlets;
 
-import DAO.UserDAOImpl;
+import DAO.implementations_DAO.UserDAOImpl;
 import HashPassword.MD5Hash;
 import Hibernate.HibernateConnector;
 import models.User_model;
@@ -21,9 +21,7 @@ public class Registration extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");
         String login = req.getParameter("login");
-        String username = req.getParameter("username");
-      //  String date = req.getParameter("date");
-      //  String country = req.getParameter("country");
+        String username = req.getParameter("name");
         String password = null;
         String password_repeat = null;
         String email = null;
@@ -43,13 +41,12 @@ public class Registration extends HttpServlet {
             e.printStackTrace();
         }
 
-        if (EmailValidator.getInstance().isValid(req.getParameter("email")) && (password.equals(password_repeat)) && (userDAO.findByUsername(username)) == null){
+        if (EmailValidator.getInstance().isValid(req.getParameter("email")) && (password.equals(password_repeat)) && (userDAO.findByName(username)) == null){
             email = req.getParameter("email");
             user = new User_model(username, email, login, password, password_repeat);
         }
 
         if (user != null){
-            userDAO.addUser(user);
             userDAO.save(user);
             resp.sendRedirect(req.getContextPath() + "auth.html");
         }

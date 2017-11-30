@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/styles/main.css">
-    <link rel="stylesheet" href="static/styles/advices.css">
-    <link rel="stylesheet" href="static/styles/product-block.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/advices.css">
+    <link rel="stylesheet" href="../static/styles/product-block.css">
 </head>
 <body>
     <div class="header">
@@ -20,7 +20,7 @@
             <li><a href="ranking.html">Рейтинг</a></li>
             <li><a href="advices.html">Советы</a></li>
             <li><a href="forum.html">Форум</a></li>
-            <li><a href="/log_out">Выход</a></li>
+            <li><a href="logout">Выход</a></li>
         </ul>
     </div>
     <div class="advices-header">
@@ -41,9 +41,11 @@
             <div class="date">Дата</div>
         </div>
         <div class="new-advice-form">
-            <form action="/" method="post">
+            <form action="add_advice" method="post">
                 <label for="text">Введите текст совета: </label>
-                <textarea id="text" class="form-control"></textarea>
+                <textarea id="text" class="form-control" name="advice"></textarea>
+
+                <div><input type="submit" value="Отправить" class="btn btn-primary save-btn"></div>
             </form>
         </div>
     </div>
