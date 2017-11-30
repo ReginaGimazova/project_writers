@@ -13,12 +13,7 @@
 <body>
     <#include "header.ftl">
     <div class="common-inf">
-        <div>Выберите категорию:
-            <select id="category" name="category">
-                <option value="prose">Проза</option>
-                <option value="poetry">Поэзия</option>
-            </select>
-        </div>
+        <#include "choose_category.ftl">
     </div>
     <div class="products">
         <#list products as product>
