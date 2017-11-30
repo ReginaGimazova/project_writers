@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../webapp/static/styles/main.css">
-    <link rel="stylesheet" href="../../webapp/static/styles/product.css">
-    <link rel="stylesheet" href="../../webapp/static/styles/product-block.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/product.css">
+    <link rel="stylesheet" href="../static/styles/product-block.css">
 </head>
 <body>
     <#include "header.ftl">
@@ -19,11 +19,11 @@
         </p>
     </div>
     <div class="meta-inf">
-        <div>${product.author}</div>
+        <div>${product.author.name}</div>
         <div>${product.date}</div>
         <div class="float-right like-dislike-buttons">
-            <span class="glyphicon glyphicon-thumbs-up"></span> ${product.likesNumber}
-            <span class="glyphicon glyphicon-thumbs-down"></span> ${product.dislikesNumber}
+            <span onclick="do_like(product_id=${product.id})" class="glyphicon glyphicon-thumbs-up"></span> ${product.likesNumber}
+            <span onclick="do_dislike(product_id=${product.id})" class="glyphicon glyphicon-thumbs-down"></span> ${product.dislikesNumber}
         </div>
     </div>
     <div class="comments-header">
@@ -34,7 +34,7 @@
         <#list comments as comment>
             <div class="comment">
                 <div>
-                    <div class="author">${comment.author}</div>
+                    <div class="author">${comment.author.name}</div>
                     <div class="date">${comment.date}</div>
                 </div>
                 <div class="text">

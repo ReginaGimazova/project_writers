@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
-@WebServlet(name = "Login", urlPatterns = {"/Login"})
+@WebServlet(name = "auth", urlPatterns = {"/auth"})
 
 public class Login extends HttpServlet {
     @Override

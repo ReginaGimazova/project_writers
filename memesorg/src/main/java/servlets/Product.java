@@ -20,8 +20,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-@WebServlet(name = "add_comment", urlPatterns = {"/add_comment"})
-public class Add_comment extends HttpServlet {
+@WebServlet(name = "product", urlPatterns = {"/product"})
+public class Product extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");

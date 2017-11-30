@@ -5,8 +5,8 @@
     <title>Регистрация</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../webapp/static/styles/main.css">
-    <link rel="stylesheet" href="../../webapp/static/styles/sign_up.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/sign_up.css">
 </head>
 <body>
     <div class="header">
@@ -17,13 +17,14 @@
             <h1 class="title">Регистрация нового пользователя</h1>
         </div>
         <div class="form">
-            <form action="sign_up" method="post">
+            <form name="sign_up_validation" siaction="sign_up" method="post">
                 <div class="form-group">
                     <div class=" label">
                         <label for="login" class="col-form-label ">Логин</label></div>
                     <div class="">
                         <input type="text" id="login" name="login" class="form-control ">
                     </div>
+
                 </div>
                 <div class="form-group">
                     <div class=" label">
@@ -38,7 +39,7 @@
                         <label for="password-repeat" class="col-form-label ">Повторите пароль</label>
                     </div>
                     <div class="">
-                        <input type="password" id="password-repeat" name="passord-repeat" class="form-control ">
+                        <input type="password" id="password-repeat" name="password-repeat" class="form-control ">
                     </div>
                 </div>
                 <div style="margin: 75px"></div>
