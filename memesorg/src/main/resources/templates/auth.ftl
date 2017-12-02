@@ -37,7 +37,7 @@
     <img src="../static/media/ORline.png" class="sep_line">
     </div>
     <div>
-    <a href="/signup"><button class="sign_up_button btn btn-outline-primary">Зарегистрироваться</button></a>
+    <a href="/sign_up"><button class="sign_up_button btn btn-outline-primary">Зарегистрироваться</button></a>
     </div>
 </div>
 </body>

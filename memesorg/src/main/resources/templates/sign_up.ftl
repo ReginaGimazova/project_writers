@@ -59,34 +59,7 @@
                         <input type="email" id="email" name="email" class="form-control ">
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class=" label">
-                        <label for="birthday" class=" col-form-label ">Дата рождения</label>
-                    </div>
-                    <div class="">
-                        <input type="date" id="birthday" name="birthday" class="form-control ">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class=" label">
-                        <label for="country" class=" col-form-label ">Страна</label>
-                    </div>
-                    <div class="">
-                        <select id="country" name="country" class="form-control ">
-                            <#list countries as country>
-                                <option value="${country.id}">${country.name}</option>
-                            </#list>
-                        </select>
-                    </div>
-                </div>
-                <!--<div class="form-group">-->
-                    <!--<div class=" label">-->
-                        <!--<label for="photo" class="col-form-label ">Фото</label>-->
-                    <!--</div>-->
-                    <!--<div class="">-->
-                        <!--<input type="file" id="photo" name="photo" class="form-control ">-->
-                    <!--</div>-->
-                <!--</div>-->
+
                 <div class="form-group buttons">
                     <div><input type="submit" value="Сохранить" class="btn btn-primary save-btn"></div>
                     <div><a href="/"><button class="btn btn-secondary cancel-btn">Отменить</button></a></div>

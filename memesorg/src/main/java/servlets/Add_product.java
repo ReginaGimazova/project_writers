@@ -22,7 +22,6 @@ public class Add_product extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
         Long id = (Long) req.getSession().getAttribute("user_id");
 
         String name = new String(req.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");

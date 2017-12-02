@@ -5,8 +5,8 @@
     <title>Вход</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles/main.css">
-    <link rel="stylesheet" href="../static/styles/auth.css">
+    <link rel="stylesheet" href="/../css/main.css">
+    <link rel="stylesheet" href="/../css/auth.css">
 </head>
 <body>
 <div class="header">
@@ -37,7 +37,7 @@
     <img src="../static/media/ORline.png" class="sep_line">
     </div>
     <div>
-    <a href="/signup"><button class="sign_up_button btn btn-outline-primary">Зарегистрироваться</button></a>
+    <a href="/sign_up"><button class="sign_up_button btn btn-outline-primary">Зарегистрироваться</button></a>
     </div>
 </div>
 </body>

@@ -16,7 +16,7 @@
                 <a class="nav-link" href="/auth">Вход</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/signup">Регистрация</a>
+                <a class="nav-link" href="/sign_up">Регистрация</a>
             </li>
         </ul>
     </div>
@@ -26,7 +26,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec leo justo. Sed ante urna, fermentum a luctus vel, feugiat in neque. Etiam felis sapien, congue a erat non, lobortis dapibus dui. Praesent libero urna, dapibus vita</p>
         </div>
         <div class="join-btn">
-            <a href="/signup" class=""><button class="btn">Присоединиться</button></a>
+            <a href="/sign_up" class=""><button class="btn">Присоединиться</button></a>
         </div>
     </div>
     <!--<footer>-->
