@@ -14,12 +14,12 @@ public class Logout extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getSession().invalidate();
-		response.sendRedirect(request.getContextPath() + "auth.html");
+		response.sendRedirect(request.getContextPath() + "/auth");
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html; charset=utf-8");
-		req.getRequestDispatcher("auth.html").forward(req, resp);
+		resp.setContentType("charset=utf-8");
+		req.getRequestDispatcher("/main").forward(req, resp);
 	}
 }

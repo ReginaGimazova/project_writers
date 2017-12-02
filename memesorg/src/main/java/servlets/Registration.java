@@ -48,16 +48,16 @@ public class Registration extends HttpServlet {
 
         if (user != null){
             userDAO.save(user);
-            resp.sendRedirect(req.getContextPath() + "auth.html");
+            resp.sendRedirect(req.getContextPath() + "/auth");
         }
         else {
-            resp.sendRedirect(req.getContextPath() + "sign_up.html");
+            resp.sendRedirect(req.getContextPath() + "/sign_up");
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
+        resp.setContentType("charset=UTF-8");
         req.getRequestDispatcher("sign_up.html").forward(req, resp);
     }
 

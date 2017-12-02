@@ -35,18 +35,18 @@ public class Login extends HttpServlet {
             HttpSession session = req.getSession();
             Long userId = user.getId();
             session.setAttribute("user_id", userId);
-            resp.sendRedirect(req.getContextPath() + "add_product.html");
+            resp.sendRedirect(req.getContextPath() + "/profile");
             //req.getRequestDispatcher("add_product.html").forward(req, resp);
         }
         else {
-            resp.sendRedirect(req.getContextPath() + "auth.html");
+            resp.sendRedirect(req.getContextPath() + "/auth");
             // req.getRequestDispatcher("auth.html").forward(req, resp);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
+        resp.setContentType("charset=UTF-8");
         req.getRequestDispatcher("auth.html").forward(req, resp);
     }
 }

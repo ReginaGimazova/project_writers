@@ -45,12 +45,12 @@ public class Add_product extends HttpServlet {
 
         workDAO.save(work_model);
 
-        resp.sendRedirect(req.getContextPath() + "advices.html");
+        resp.sendRedirect(req.getContextPath() + "/add_advice");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
+        resp.setContentType("charset=UTF-8");
         req.getRequestDispatcher("add_product.html").forward(req, resp);
     }
 }

@@ -15,12 +15,11 @@
         <a class="brand" href="/">Just Write!</a>
         <img src="" class="menu-btn float-right">
         <ul class="menu">
-            <li><a href="profile.html">Профиль</a></li>
-            <li><a href="products.html">Произведения</a></li>
-            <li><a href="ranking.html">Рейтинг</a></li>
-            <li><a href="advices.html">Советы</a></li>
-            <li><a href="forum.html">Форум</a></li>
-            <li><a href="/log_out">Выход</a></li>
+            <li><a href="/profile">Профиль</a></li>
+            <li><a href="/products">Произведения</a></li>
+            <li><a href="/ranking">Рейтинг</a></li>
+            <li><a href="/advices">Советы</a></li>
+            <li><a href="/logout">Выход</a></li>
         </ul>
     </div>
     <div class="advices-header">
@@ -41,7 +40,7 @@
             <div class="date">Дата</div>
         </div>
         <div class="new-advice-form">
-            <form action="add_advice" method="post">
+            <form action="/add_advice" method="post">
                 <label for="text">Введите текст совета: </label>
                 <textarea id="text" name="advice" class="form-control"></textarea>
 

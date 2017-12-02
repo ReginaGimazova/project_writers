@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @WebServlet(name = "add_advice", urlPatterns = {"/add_advice"})
-public class Add_advice extends HttpServlet {
+public class Advices extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");
@@ -39,12 +39,12 @@ public class Add_advice extends HttpServlet {
 
         adviceDAO.save(advice_model);
 
-        resp.sendRedirect(req.getContextPath() + "product.html");
+        resp.sendRedirect(req.getContextPath() + "/product");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=utf-8");
+        resp.setContentType("charset=utf-8");
         req.getRequestDispatcher("advices.html").forward(req, resp);
     }
 }

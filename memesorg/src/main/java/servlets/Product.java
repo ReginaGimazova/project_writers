@@ -54,12 +54,12 @@ public class Product extends HttpServlet {
 
         commentDAO.save(comment_model);
 
-        resp.sendRedirect(req.getContextPath() + "profile.html");
+        resp.sendRedirect(req.getContextPath() + "/profile");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=utf-8");
+        resp.setContentType("charset=utf-8");
         req.getRequestDispatcher("product.html").forward(req, resp);
     }
 }
