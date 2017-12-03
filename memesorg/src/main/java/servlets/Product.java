@@ -1,14 +1,11 @@
 package servlets;
 
-import DAO.implementations_DAO.AdviceDAOImpl;
 import DAO.implementations_DAO.CommentDAOImpl;
 import DAO.implementations_DAO.UserDAOImpl;
 import DAO.implementations_DAO.WorkDAOImpl;
-import models.Advice_model;
 import models.Comment_model;
 import models.User_model;
 import models.Work_model;
-import org.hibernate.Session;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +19,7 @@ import java.util.Set;
 
 @WebServlet(name = "product", urlPatterns = {"/product"})
 public class Product extends HttpServlet {
-    @Override
+   /* @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");
         Long user_id = (Long)req.getSession().getAttribute("user_id");
@@ -35,15 +32,15 @@ public class Product extends HttpServlet {
         CommentDAOImpl commentDAO = new CommentDAOImpl();
 
         UserDAOImpl userDAO = new UserDAOImpl();
-        WorkDAOImpl workDAO = new WorkDAOImpl();
+       // WorkDAOImpl workDAO = new WorkDAOImpl();
 
         User_model user = userDAO.find(user_id);
         userDAO.getSession().close();
 
-        Work_model work = workDAO.find(work_id);
-        workDAO.getSession().close();
+      //  Work_model work = workDAO.find(work_id);
+       // workDAO.getSession().close();
 
-        comment_model.setUser(user);
+      comment_model.setUser(user);
         comment_model.setWork(work);
 
         Set<Comment_model> comments = new HashSet<Comment_model>();
@@ -54,12 +51,28 @@ public class Product extends HttpServlet {
 
         commentDAO.save(comment_model);
 
-        resp.sendRedirect(req.getContextPath() + "profile.html");
+        Work_model work_model= (Work_model) req.getAttribute("product");
+        resp.setContentType("charset=UTF-8");
+        req.getRequestDispatcher("/templates/products.ftl").forward(req, resp);
+
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=utf-8");
-        req.getRequestDispatcher("product.html").forward(req, resp);
+        resp.setContentType("charset=utf-8");
+        req.getRequestDispatcher("/templates/product.ftl").forward(req, resp);
+    }*/
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("charset=UTF-8");
+        req.getRequestDispatcher("/templates/product.ftl").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Work_model work_model= (Work_model) req.getAttribute("product");
+        resp.setContentType("charset=UTF-8");
+        req.getRequestDispatcher("/templates/product.ftl").forward(req, resp);    }
 }

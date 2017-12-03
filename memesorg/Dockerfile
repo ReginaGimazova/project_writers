@@ -1,7 +1,7 @@
-FROM maven:latest as builder
-
-RUN mkdir /usr/src/app
+FROM maven:latest as warfile
 WORKDIR /usr/src/app
+COPY pom.xml .
+RUN mkdir /usr/src/app
 COPY . .
 RUN mvn install
 
@@ -15,5 +15,5 @@ COPY --from=builder /usr/src/app/target/ROOT.war /usr/local/tomcat/webapps
 
 WORKDIR /usr/local/tomcat/bin
 
-EXPOSE 8080
+EXPOSE 8081
 CMD ["sh", "catalina.sh", "run"]
