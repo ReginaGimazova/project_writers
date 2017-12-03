@@ -42,8 +42,8 @@
     </database>
     <schema id="14" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-12-01.21:01:59.566</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1092</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-12-03.20:04:18.767</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1117</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -81,7 +81,7 @@
     </table>
     <table id="24" parent="14" name="user_table">
       <ObjectId>41287</ObjectId>
-      <StateNumber>922</StateNumber>
+      <StateNumber>1114</StateNumber>
     </table>
     <table id="25" parent="14" name="work">
       <ObjectId>41224</ObjectId>
@@ -233,8 +233,8 @@
     </column>
     <column id="50" parent="24" name="login">
       <Position>2</Position>
-      <DataType>varchar(30)|0</DataType>
-      <StateNumber>915</StateNumber>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>1114</StateNumber>
     </column>
     <column id="51" parent="24" name="username">
       <Position>3</Position>
@@ -243,13 +243,13 @@
     </column>
     <column id="52" parent="24" name="password">
       <Position>4</Position>
-      <DataType>varchar(40)|0</DataType>
-      <StateNumber>926</StateNumber>
+      <DataType>varchar(60)|0</DataType>
+      <StateNumber>1115</StateNumber>
     </column>
     <column id="53" parent="24" name="password_confirm">
       <Position>5</Position>
-      <DataType>varchar(40)|0</DataType>
-      <StateNumber>927</StateNumber>
+      <DataType>varchar(60)|0</DataType>
+      <StateNumber>1116</StateNumber>
     </column>
     <column id="54" parent="24" name="email">
       <Position>6</Position>
@@ -262,7 +262,7 @@
       <Unique>1</Unique>
     </index>
     <index id="56" parent="24" name="user_table_login_uindex">
-      <ObjectId>41290</ObjectId>
+      <ObjectId>41407</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
@@ -297,9 +297,9 @@
     </column>
     <column id="62" parent="25" name="text_of_work">
       <Position>4</Position>
-      <DataType>varchar(10000)|0</DataType>
+      <DataType>varchar(30000)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1074</StateNumber>
+      <StateNumber>1117</StateNumber>
     </column>
     <column id="63" parent="25" name="date_of_add_work">
       <Position>5</Position>

@@ -12,6 +12,6 @@ public class Ranking extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("charset=UTF-8");
-        req.getRequestDispatcher("ranking.html").forward(req, resp);
+        req.getRequestDispatcher("/templates/ranking.ftl").forward(req, resp);
     }
 }

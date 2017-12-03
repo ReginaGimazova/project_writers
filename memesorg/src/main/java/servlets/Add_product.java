@@ -4,14 +4,13 @@ import DAO.implementations_DAO.UserDAOImpl;
 import DAO.implementations_DAO.WorkDAOImpl;
 import models.User_model;
 import models.Work_model;
-import org.hibernate.Session;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashSet;
@@ -44,12 +43,14 @@ public class Add_product extends HttpServlet {
 
         workDAO.save(work_model);
 
-        resp.sendRedirect(req.getContextPath() + "/add_advice");
+        req.setAttribute("product", work_model);
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/product");
+        requestDispatcher.forward(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("charset=UTF-8");
-        req.getRequestDispatcher("add_product.html").forward(req, resp);
+        req.getRequestDispatcher("/templates/add_product.ftl").forward(req, resp);
     }
 }

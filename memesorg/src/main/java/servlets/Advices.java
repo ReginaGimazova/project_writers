@@ -2,10 +2,8 @@ package servlets;
 
 import DAO.implementations_DAO.AdviceDAOImpl;
 import DAO.implementations_DAO.UserDAOImpl;
-import DAO.interfaces_DAO.UserDAO;
 import models.Advice_model;
 import models.User_model;
-import models.Work_model;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -45,6 +43,6 @@ public class Advices extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("charset=utf-8");
-        req.getRequestDispatcher("advices.html").forward(req, resp);
+        req.getRequestDispatcher("/templates/advices.ftl").forward(req, resp);
     }
 }

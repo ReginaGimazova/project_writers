@@ -1,5 +1,6 @@
+<#ftl encoding='UTF-8'>.
 <div class="header">
-    <a class="brand" href="/">Just Write!</a>
+    <a class="brand" href="/profile">Just Write!</a>
     <img src="" class="menu-btn float-right">
     <ul class="menu">
         <li><a href="/profile">Профиль</a></li>

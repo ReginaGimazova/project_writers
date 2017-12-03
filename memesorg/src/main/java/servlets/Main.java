@@ -12,6 +12,6 @@ public class Main extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("charset=UTF-8");
-        req.getRequestDispatcher("main_page.html").forward(req, resp);
+        req.getRequestDispatcher("/templates/main_page.ftl").forward(req, resp);
     }
 }

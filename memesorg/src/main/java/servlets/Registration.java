@@ -19,9 +19,8 @@ import java.security.NoSuchAlgorithmException;
 public class Registration extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
-        String login = req.getParameter("login");
-        String username = req.getParameter("name");
+        String login = new String(req.getParameter("login").getBytes("ISO-8859-1"),"UTF-8");
+        String username = new String(req.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
         String password = null;
         String password_repeat = null;
         String email = null;
@@ -58,7 +57,7 @@ public class Registration extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("charset=UTF-8");
-        req.getRequestDispatcher("sign_up.html").forward(req, resp);
+        req.getRequestDispatcher("/templates/sign_up.ftl").forward(req, resp);
     }
 
     @Override

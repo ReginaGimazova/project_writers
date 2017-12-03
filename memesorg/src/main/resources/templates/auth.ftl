@@ -1,16 +1,18 @@
+<#ftl encoding='UTF-8'>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Вход</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles/main.css">
-    <link rel="stylesheet" href="../static/styles/auth.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/auth.css">
 </head>
 <body>
 <div class="header">
-    <a class="brand" href="/">Just Write!</a>
+    <a class="brand" href="/profile">Just Write!</a>
 </div>
 <div class="content">
     <div>
@@ -34,7 +36,7 @@
         </form>
     </div>
     <div>
-    <img src="../static/media/ORline.png" class="sep_line">
+    <img src="/media/ORline.png" class="sep_line">
     </div>
     <div>
     <a href="/sign_up"><button class="sign_up_button btn btn-outline-primary">Зарегистрироваться</button></a>
