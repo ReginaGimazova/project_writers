@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Регистрация</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles/main.css">
-    <link rel="stylesheet" href="../static/styles/sign_up.css">
-    <script src="../static/javascript/sign_up_form_validation.js"></script>
-    <script src="../static/javascript/regexps.js"></script>
-</head>
+<#import "head.ftl" as head>
+<@head.head title="Регистрация" extra_styles=["sign_up.css"] extra_scripts=["regexps.js", "sign_up_form_validation.js"]/>
 <body>
     <div class="header">
         <a class="brand" href="/">Just Write!</a>

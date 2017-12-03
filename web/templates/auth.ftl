@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Вход</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles/main.css">
-    <link rel="stylesheet" href="../static/styles/auth.css">
-    <script src="../static/javascript/regexps.js"></script>
-    <script src="../static/javascript/auth_form_validation.js"></script>
-</head>
+<#import "head.ftl" as head>
+<@head.head title="Вход" extra_styles=["auth.css"] extra_scripts=["regexps.js", "auth_form_validation.js"]/>
 <body>
 <div class="header">
     <a class="brand" href="/">Just Write!</a>

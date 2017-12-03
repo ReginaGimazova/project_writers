@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<#import "head.ftl" as head>
+<@head.head title="Личный кабинет" extra_styles=["profile.css", "product-block.css"] extra_scripts=[]/>
 <head>
     <meta charset="UTF-8">
     <title>Личный кабинет</title>
