@@ -21,5 +21,14 @@
         </p>
     </div>
 
+    <div class="meta-inf">
+        <div>${Request.product.user.username}</div>
+
+        <div class="float-right like-dislike-buttons">
+            <span class="glyphicon glyphicon-thumbs-up"></span> 20
+            <span class="glyphicon glyphicon-thumbs-down"></span> 6
+        </div>
+    </div>
+
 </body>
 </html>

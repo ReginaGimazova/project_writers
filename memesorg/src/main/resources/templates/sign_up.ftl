@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/sign_up.css">
+    <script src=/javascript/auth_form_validation.js"></script>
+    <script src="/javascript/sign_up_form_validation.js"></script>
 </head>
 <body>
 <div class="header">
@@ -18,7 +20,7 @@
         <h1 class="title">Регистрация нового пользователя</h1>
     </div>
     <div class="form">
-        <form name="sign_up_validation" action="sign_up" method="post">
+        <form name="sign_up_validation" action="sign_up" method="post" onsubmit="return validateRegistration()">
             <div class="form-group">
                 <div class=" label">
                     <label for="login" class="col-form-label ">Логин</label></div>
@@ -40,7 +42,7 @@
                     <label for="password-repeat" class="col-form-label ">Повторите пароль</label>
                 </div>
                 <div class="">
-                    <input type="password" id="password-repeat" name="password_confirm" class="form-control " required>
+                    <input type="password" id="password-repeat" name="password-confirm" class="form-control " required>
                 </div>
             </div>
             <div style="margin: 75px"></div>

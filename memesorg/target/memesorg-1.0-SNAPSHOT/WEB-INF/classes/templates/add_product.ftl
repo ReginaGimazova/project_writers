@@ -33,7 +33,7 @@
 
             <select class="form-control" name="genre" style="margin-bottom: 5px; height: 30px">
                 <option>Поэзия</option>
-                <option>Поэма</option>
+                <option>Проза</option>
             </select>
             <div class="form-group btns">
                 <a href="/product"><button class="btn">Отменить</button></a>

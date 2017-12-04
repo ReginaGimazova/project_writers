@@ -44,8 +44,8 @@ public class Add_product extends HttpServlet {
         workDAO.save(work_model);
 
         req.setAttribute("product", work_model);
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/product");
-        requestDispatcher.forward(req, resp);
+        RequestDispatcher requestDispatcher1 = getServletContext().getRequestDispatcher("/product"); //в сервлет product
+        requestDispatcher1.forward(req, resp);
     }
 
     @Override

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/auth.css">
+    <script src=/javascript/regexps.js"></script>
+    <script src=/javascript/auth_form_validation.js"></script>
+
 </head>
 <body>
 <div class="header">
@@ -19,7 +22,7 @@
     <h1 class="title">Вход</h1>
     </div>
     <div class="auth_form">
-        <form action="/auth" method="post">
+        <form action="/auth" method="post" onsubmit="return validateAuth()">
             <div class="form-group">
                 <label>
                 <input id="login" type="text" name="login" class="form-control input-text" placeholder="Логин"/>

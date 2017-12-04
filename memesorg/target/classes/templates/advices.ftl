@@ -20,21 +20,27 @@
             <!--<a href="">Добавить свой совет</a>-->
         <!--</div>-->
     </div>
-    <div class="advices">
-        <#list advices as advice>
-            <div class="advice">
-                <div class="author">${advice.author}</div>
-                <div class="text">${advice.text}</div>
-                <div class="date">${advice.date}</div>
-            </div>
-        </#list>
 
+    <div class="advices">
+        <div class="advice">
+            <div class="author">Автор совета</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque arcu purus, eu dignissim dolor aliquet vitae. Nunc viverra sapien ut velit cursus vehicula. In vestibulum, risus nec cursus dictum, sapien nisl venenatis mi, mattis finibus velit sapien eget justo.</div>
+            <div class="date">Дата</div>
+        </div>
+        <div class="advice">
+            <div class="author">Автор совета</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque arcu purus, eu dignissim dolor aliquet vitae. Nunc viverra sapien ut velit cursus vehicula. In vestibulum, risus nec cursus dictum, sapien nisl venenatis mi, mattis finibus velit sapien eget justo.</div>
+            <div class="date">Дата</div>
+        </div>
         <div class="new-advice-form">
-            <form action="/ajax/add_advice" method="post">
+            <form action="/add_advice" method="post">
                 <label for="text">Введите текст совета: </label>
-                <textarea id="text" class="form-control"></textarea>
+                <textarea id="text" name="advice" class="form-control"></textarea>
+
+                <div><input type="submit" value="Отправить" class="btn btn-primary save-btn"></div>
             </form>
         </div>
+    </div>
     </div>
 </body>
 </html>

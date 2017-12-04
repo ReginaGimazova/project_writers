@@ -71,7 +71,6 @@ public class Product extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         Work_model work_model= (Work_model) req.getAttribute("product");
         resp.setContentType("charset=UTF-8");
         req.getRequestDispatcher("/templates/product.ftl").forward(req, resp);    }

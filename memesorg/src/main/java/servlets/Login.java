@@ -37,6 +37,7 @@ public class Login extends HttpServlet {
             HttpSession session = req.getSession();
             Long userId = user.getId();
             session.setAttribute("user_id", userId);
+
             req.setAttribute("user", user);
            // resp.sendRedirect(req.getContextPath() + "/profile");
             RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/profile");

@@ -29,6 +29,33 @@
         </div>
     </div>
 
-
+    <div class="products">
+        <div class="product">
+            <div>
+                <div class="name"><h5><a href="/product">Название</a></h5></div>
+                <div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec leo justo. Sed ante urna, fermentum a luctus vel, feugiat in neque. Etiam felis sapien, congue a erat non, lobortis dapibus dui.</p></div>
+            </div>
+            <div>
+                <div class="meta-data">
+                    имя владельца <br>
+                    дата добавления
+                </div>
+                <div><span class="glyphicon glyphicon-thumbs-up"></span> 56 <span class="glyphicon glyphicon-thumbs-down"></span> 45</div>
+            </div>
+        </div>
+        <div class="product">
+            <div>
+                <div class="name"><h5><a href="/product">Название</a></h5></div>
+                <div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec leo justo. Sed ante urna, fermentum a luctus vel, feugiat in neque. Etiam felis sapien, congue a erat non, lobortis dapibus dui.</p></div>
+            </div>
+            <div>
+                <div class="meta-data">
+                    имя владельца <br>
+                    дата добавления
+                </div>
+                <div><span class="glyphicon glyphicon-thumbs-up"></span> 56 <span class="glyphicon glyphicon-thumbs-down"></span> 45</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
